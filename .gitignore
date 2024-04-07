@@ -1,5 +1,5 @@
 venv/*
-data_logs/*
+armazenamento_registro_dados/*
 !data_logs/adicione_seus_logs_aqui.txt
 images_plot/*
 !images_plot/imagens_plotadas_serao_armazenadas_aqui.txt
