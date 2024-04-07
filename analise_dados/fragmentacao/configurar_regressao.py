@@ -1,3 +1,4 @@
+import os
 from sklearn.linear_model import LinearRegression
 import statsmodels.api as sm
 
@@ -35,6 +36,13 @@ def configurar_regressao(data_frame, diretorio_plots):
     # Imprimindo o resumo estatístico (incluindo coeficientes, erro padrão, valor p, etc.)
     print(regression_summary)
     
-    # Salvar o resumo da regressão em um arquivo de texto
-    with open(f'{diretorio_plots}/fragmentacao/', 'w') as f:
+    file_directory = f'{diretorio_plots}/fragmentacao'
+    file_path = f'{file_directory}/resumo_estatistico_regressao_fragmentacao.txt'
+        
+    # Verificar se o diretório existe, se não, criar
+    if not os.path.exists(file_directory):
+        os.makedirs(file_directory)
+
+    # Criar o arquivo vazio
+    with open(file_path, 'w') as f:
         f.write(regression_summary.as_text())

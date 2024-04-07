@@ -18,7 +18,7 @@ def tipo_log(qual_log):
 
 
 def monitoramentos_start(diretorio_plots):
-    logs_tipo = tipo_log('kvm')
+    logs_tipo = tipo_log('xen')
     
     for nome_arquivo, caminho_arquivo in logs_gerais.items():        
         novo_data_frame = carregar_data_frame(caminho_arquivo)

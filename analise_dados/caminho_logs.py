@@ -1,5 +1,5 @@
 PROCURAR_DADOS_EM = 'armazenamento_registro_dados'
-TIPO_VIRTUALIZADOR_PASTA = 'logs_kvm/logs'
+TIPO_VIRTUALIZADOR_PASTA = 'registros de monitoramento dos testes de envelhecimento/xen/logs_172.20.101.23'
 CAMINHO_ABSOLUTO = f'./{PROCURAR_DADOS_EM}/{TIPO_VIRTUALIZADOR_PASTA}'
 
 logs_gerais = {
@@ -38,7 +38,10 @@ logs_kvm = {
 }
 
 logs_xen = {
-    
+    'xen_monitoring_oxenstored':
+        f'{CAMINHO_ABSOLUTO}/xen_monitoring-oxenstored,csv',
+    'xen_monitoring_xenbus':
+        f'{CAMINHO_ABSOLUTO}/xen_monitoring-xenbus.csv'
 }
 
 logs_lxc = {

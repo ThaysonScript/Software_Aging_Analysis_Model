@@ -16,6 +16,7 @@ def fragmentacao_start(diretorio_plots):
 
     data_frame_pivotado = pivotar_data_frame(novo_data_frame)
 
+    salvar_estatisticas_regressao = configurar_regressao(data_frame_pivotado ,diretorio_plots)
+    
     data_frame_pivotado = fazer_plotagem(data_frame_pivotado, diretorio_plots)
     
-    salvar_estatisticas_regressao = configurar_regressao(data_frame_pivotado ,diretorio_plots)
