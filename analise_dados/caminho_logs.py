@@ -39,7 +39,7 @@ logs_kvm = {
 
 logs_xen = {
     'xen_monitoring_oxenstored':
-        f'{CAMINHO_ABSOLUTO}/xen_monitoring-oxenstored,csv',
+        f'{CAMINHO_ABSOLUTO}/xen_monitoring-oxenstored.csv',
     'xen_monitoring_xenbus':
         f'{CAMINHO_ABSOLUTO}/xen_monitoring-xenbus.csv'
 }
