@@ -1,0 +1,46 @@
+1 - passo:
+    verifique qual o seu ambiente de execução:
+        windows|Linux
+
+    caso seja windows verifique se os pacotes estão instalados
+    
+    caso não:
+        instale as libs com o pip ou crie um venv e instale elas
+
+    libs:
+        pip install pandas
+        pip install matplotlib
+        pip install scipy
+        pip install scikit-learn
+
+2 - passo:
+    caso seja Linux faça o seguinte:
+        execute o arquivo bash installs_venv.sh no terminal na pasta raiz do repositório com:
+            bash installs_venv.sh
+
+        este script cria um ambiente venv do python e instala todas as bibliotecas necessárias para a execução
+
+3 - passo:
+    configurado isso tudo acima, verifique o arquivo 'caminho_logs.py' e altere conforme a necessidade
+
+    verifique e altere conforme a necessidade o arquivo 'monitoramentos_start.py' na pasta 'analise_dados/monitoramentos' {
+        altere este argumento da função:
+            logs_tipo = tipo_log('kvm') -> aqui esta como kvm, mas use por exemplo vbox, xen, lxc
+
+    } -> isto faz com que seja carregado um arquivo por vez de cada log de monitoramento do tipo de virtualizador especifico
+
+4 - passo:
+    modo de execução:
+        execute o arquivo 'main.py' definindo ou não um subdiretório de escolha
+
+        ou
+
+        simplesmente altere estas variáveis no arquivo 'caminho_logs' na pasta 'analise_dados':
+            TIPO_VIRTUALIZADOR = '_kvm/logs'
+
+            CAMINHO_ABSOLUTO = f'./data_logs/logs{TIPO_VIRTUALIZADOR}'
+
+        o padrão dos plots dos gráficos é ficarem na pasta 'images_plot', mas se preferir alterar isso também:
+            altere esta variável na função 'criar_dir' na pasta 'utils/criar_dir.py':
+                def criar_dir():
+                    DIRETORIO_PADRAO = './images_plot/'
