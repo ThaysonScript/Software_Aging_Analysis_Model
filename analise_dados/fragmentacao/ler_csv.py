@@ -9,9 +9,9 @@ def ler_csv(caminho_arquivo):
         return pd.read_csv(caminho_arquivo, delimiter=";", header=0)
 
     except FileNotFoundError:
-        print("File not found.")
+        print("Seu arquivo não existe, verifique os caminhos, nome, etc do arquivo a ser analisado")
         return None
 
     except Exception as e:
-        print("An error occurred:", str(e))
+        print("Um erro foi ocorrido em:", str(e))
         return None

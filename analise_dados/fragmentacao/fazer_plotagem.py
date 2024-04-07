@@ -37,6 +37,3 @@ def fazer_plotagem(data_frame_pivotado, diretorio_plots):
     # Salvar a figura como uma imagem
     plt.savefig(f'{diretorio_plots}/fragmentacao/fragmentation.png')
     plt.close()
-
-    # Exibir o gráfico
-    # plt.show()
