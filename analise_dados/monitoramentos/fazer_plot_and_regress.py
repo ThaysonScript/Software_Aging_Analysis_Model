@@ -69,10 +69,10 @@ def fazer_plot_regressao(data_frame, nome_arquivo, diretorio_plots):
       # plt.show()
       
       
-      adicionar_statistica_regressao(
-        modelo=model, 
-        x=x, y=y, 
-        nome_arquivo=nome_arquivo,
-        col=col,
-        diretorio_plots=diretorio_plots
-      )
+      # adicionar_statistica_regressao(
+      #   modelo=model, 
+      #   x=x, y=y, 
+      #   nome_arquivo=nome_arquivo,
+      #   col=col,
+      #   diretorio_plots=diretorio_plots
+      # )

@@ -1,5 +1,5 @@
 PROCURAR_DADOS_EM = 'armazenamento_registro_dados'
-TIPO_VIRTUALIZADOR_PASTA = 'registros de monitoramento dos testes de envelhecimento/virtualbox/logs_com_disco_1gb'
+TIPO_VIRTUALIZADOR_PASTA = 'registros de monitoramento dos testes de envelhecimento/xen/logs_172.20.101.23'
 CAMINHO_ABSOLUTO = f'./{PROCURAR_DADOS_EM}/{TIPO_VIRTUALIZADOR_PASTA}'
 
 logs_gerais = {

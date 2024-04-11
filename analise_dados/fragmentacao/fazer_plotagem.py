@@ -42,9 +42,9 @@ def fazer_plotagem(data_frame_pivotado, diretorio_plots):
 
 
 
-    adicionar_statistica_regressao(
-        modelo=regression_model,
-        x=X, y=Y,
-        nome_arquivo='',
-        diretorio_plots=diretorio_plots
-    )
+    # adicionar_statistica_regressao(
+    #     modelo=regression_model,
+    #     x=X, y=Y,
+    #     nome_arquivo='',
+    #     diretorio_plots=diretorio_plots
+    # )
