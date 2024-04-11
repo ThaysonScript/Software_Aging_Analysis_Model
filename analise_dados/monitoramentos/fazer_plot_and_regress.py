@@ -1,6 +1,8 @@
 import os
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
+import statsmodels.api as sm
+from analise_dados.adicionar_statistica_regressao import adicionar_statistica_regressao
 
 def fazer_plot_regressao(data_frame, nome_arquivo, diretorio_plots):  
   incluirColunaY = True
@@ -18,8 +20,7 @@ def fazer_plot_regressao(data_frame, nome_arquivo, diretorio_plots):
       x = data_frame.index.values.reshape(-1, 1)
       y = data_frame[col].fillna(0)
 
-      model = LinearRegression()
-      model.fit(x, y)
+      model = LinearRegression().fit(x, y)
 
       Y_pred = model.predict(x)
 
@@ -66,3 +67,12 @@ def fazer_plot_regressao(data_frame, nome_arquivo, diretorio_plots):
       plt.close()
       
       # plt.show()
+      
+      
+      adicionar_statistica_regressao(
+        modelo=model, 
+        x=x, y=y, 
+        nome_arquivo=nome_arquivo,
+        col=col,
+        diretorio_plots=diretorio_plots
+      )

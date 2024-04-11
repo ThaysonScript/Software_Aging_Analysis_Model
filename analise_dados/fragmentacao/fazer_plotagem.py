@@ -1,6 +1,8 @@
 import os
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
+import statsmodels.api as sm
+from analise_dados.adicionar_statistica_regressao import adicionar_statistica_regressao
 
 def fazer_plotagem(data_frame_pivotado, diretorio_plots):    
     # Plotar os dados de ocorrência do processo em relação ao tempo para cada processo
@@ -37,3 +39,12 @@ def fazer_plotagem(data_frame_pivotado, diretorio_plots):
     # Salvar a figura como uma imagem
     plt.savefig(f'{diretorio_plots}/fragmentacao/fragmentation.png')
     plt.close()
+
+
+
+    adicionar_statistica_regressao(
+        modelo=regression_model,
+        x=X, y=Y,
+        nome_arquivo='',
+        diretorio_plots=diretorio_plots
+    )
