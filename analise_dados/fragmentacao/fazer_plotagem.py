@@ -22,7 +22,7 @@ def fazer_plotagem(data_frame_pivotado, diretorio_plots):
         plt.scatter(X, Y, label=f'{column}', alpha=0.5)
 
         # Plotar a linha de regressão para o processo atual
-        plt.plot(X, regression_model.predict(X), label=f'Linha de Regressão - {column}')
+        plt.plot(X, regression_model.predict(X), label=f'Linha de Regressão - {column}', color='red')
 
     # Adicionar rótulos e título ao gráfico
     plt.xlabel('Tempo (H)')
